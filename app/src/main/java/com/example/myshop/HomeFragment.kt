@@ -25,10 +25,10 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         with(binding){
-            val action = HomeFragmentDirections.actionHomeFragmentToCheckoutFragment()
+            var productName = txtProduct.text.toString()
+            val action = HomeFragmentDirections.actionHomeFragmentToCheckoutFragment(productName)
             btnBuy.setOnClickListener {
                 findNavController().navigate(action)
-
             }
         }
     }
