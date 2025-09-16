@@ -27,6 +27,7 @@ class HomeFragment : Fragment() {
         with(binding){
             var productName = txtProduct.text.toString()
             val action = HomeFragmentDirections.actionHomeFragmentToCheckoutFragment(productName)
+
             btnBuy.setOnClickListener {
                 findNavController().navigate(action)
             }
